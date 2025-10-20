@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="viewport"
+      content="width=device-width,
+         initial-scale=1.0"
+    />
+    <title>Collections-Carl-furniture</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Gallery</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="collection.html" class="active">Gallery</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+
+    <!--bedroom collections-->
+    <section class="collections">
+      <h2>Bedroom Collections</h2>
+      <div class="scroll-container">
+        <div class="product-card">
+          <img src="https://i.postimg.cc/G9wx5DMc/freepik-sunlit-bedroom-with-a-cozy-bed-soft-pillows-and-a-38567.jpg" alt="bed" />
+          <h3>Classic Bed</h3>
+          <p>ksh 30000</p>
+          <button class="buy-btn" onclick="openForm('classic bed')">Buy now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.postimg.cc/jjKkjp4n/freepik-wardrobe-32995.jpg" alt="wardrobe" />
+          <h3>Mordern Wardrobe</h3>
+          <p>ksh 9000</p>
+          <button class="buy-btn" onclick="openForm('Mordern wardrobe')">Buy now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.postimg.cc/Qxw2jYzK/freepik-the-style-is-candid-image-photography-with-natural-32996.jpg" alt="dresser" />
+          <h3>Dresser</h3>
+          <p>ksh 15000</p>
+          <button class="buy-btn" onclick="openForm('dresser')">Buy now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.postimg.cc/RCRCVm7y/freepik-the-style-is-3d-model-with-octane-render-volumetri-32997.jpg" alt="bedside table" />
+          <h3>Bedside Table</h3>
+          <p>ksh 10000</p>
+          <button class="buy-btn" onclick="openForm('Bedside Table')">Buy now</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Livingroom-->
+    <section class="collections">
+      <div class="scroll-container">
+        <div class="product-card">
+          <img src="https://i.postimg.cc/6Qg2cXb6/freepik-a-plush-sofa-in-a-sunlit-living-room-morning-light-32998.jpg" alt="sofa" />
+          <h3>Sofa</h3>
+          <p>ksh 29000</p>
+          <button class="buy-btn" onclick="openForm('Sofa')">Buy now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.postimg.cc/261djGMm/freepik-the-style-is-3d-model-with-octane-render-volumetri-32999.jpg" alt="tv-stand" />
+          <h3>Tv-Stand</h3>
+          <p>ksh 11000</p>
+          <button class="buy-btn" onclick="openForm('Tv-Stand')">Buy now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.postimg.cc/Hxk5Zzd0/freepik-the-style-is-candid-image-photography-with-natural-33000.jpg" alt="coffee table" />
+          <h3>Coffee Table</h3>
+          <p>ksh 7000</p>
+          <button class="buy-btn" onclick="openForm('Coffee Table')">Buy now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.postimg.cc/T1ktN1z3/freepik-the-style-is-3d-model-with-octane-render-volumetri-33001.jpg" alt="Lounge Chair" />
+          <h3>Lounge Chair</h3>
+          <p>ksh 8500</p>
+          <button class="buy-btn" onclick="openForm('Lounge Chair')">Buy now</button>
+        </div>
+      </div>
+    </section>
+    <!--popup form form-->
+    <div id="orderForm" class="popup">
+     <div class="popup-content">
+      <span class="close-btn" onclick="closeForm()">&times;</span>
+      <h2>Place Your Order</h2>
+      <form id="orderFormData" onsubmit="submitForm(event)">
+      <label for="product"=>Product:</label>
+      <input type="text" id="product" name="product" readonly>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="contact">Phone:</label>
+      <input type="text" id="contact" name="contact" required>
+      <label for="message">Additional Details:</label>
+      <textarea id="message" name="message" rows="3"
+      placeholder="Any customiztion or delivery notes...."></textarea>
+      <button type="submit" class="submit-btn">Send Order</button>
+    </form>
+    <p id="successMessage" class="success-msg"></p>
+     </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Carl Furniture. All Rights Reserved.</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
